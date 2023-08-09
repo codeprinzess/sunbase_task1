@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+
+    .container {
+      text-align: center;
+    }
+    .client-list {
+      list-style: none;
+      padding: 0;
+    }
+    .client-item {
+      cursor: pointer;
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+      transition: background-color 0.3s ease;
+    }
+    .client-item:hover {
+      background-color: #f5f5f5;
+    }
+    .popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .popup.open {
+      display: block;
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="filters">
+      <select id="filterDropdown">
+        <option value="all">All clients</option>
+        <option value="managers">Managers only</option>
+        <option value="nonManagers">Non-managers</option>
+      </select>
+    </div>
+    <ul class="client-list" id="clientList">
+
+    </ul>
+  </div>
+
+  <div class="popup" id="popup">
+    <h2 id="popupName"></h2>
+    <p id="popupPoints"></p>
+    <p id="popupAddress"></p>
+  </div>
+
+  <script>
+    // JavaScript code here
+  </script>
+</body>
+</html>
